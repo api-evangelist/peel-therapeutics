@@ -1,0 +1,38 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS probes of every /.well-known/ path in the enrichment contract against
+  peeltx.com, the only host Peel Therapeutics operates. Every path returned HTTP 404 served by the
+  site's WordPress theme, so no pointer of type WellKnown or SecurityTxt is emitted — this file
+  records a verified absence, not a served surface.
+hosts:
+- host: peeltx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+notes:
+  - >-
+    All 404 responses carried the WordPress 404 template (text/html, ~117KB), not a document. There is
+    no catch-all answering 200, so these are true negatives.
+  - >-
+    No A2A agent card was found on either the canonical /.well-known/agent-card.json path or the legacy
+    /.well-known/agent.json path, so no a2a/ artifact was authored.

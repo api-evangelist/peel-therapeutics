@@ -1,8 +1,17 @@
 aid: peel-therapeutics
 name: Peel Therapeutics
-description: 'Peel Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Peel Therapeutics is an evolutionary-medicine biotechnology company headquartered in Salt Lake City,
+  Utah, with research teams in the United States and Israel. Co-founded in 2015 by pediatric oncologist
+  Dr. Joshua Schiffman, the company translates molecules that evolution has already validated in nature
+  into therapeutics for patients with cancer and inflammatory disease. Its founding program is built on
+  elephant p53 (EP53) — elephants carry roughly forty copies of the p53 tumor-suppressor gene against the
+  human two — delivered as liposomal protein nanoparticles, alongside PEEL-224, a TOP1 inhibitor in
+  clinical development. Discovery runs on the company's proprietary, internal Darwin.AI platform and the
+  Darwin Biobank, a comparative-oncology sample collection. Peel is a therapeutics developer rather than a
+  software vendor: it publishes no developer program, no public API, and no machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/peel-therapeutics/refs/heads/main/apis.yml
+image: https://peeltx.com/wp-content/uploads/peel_facebook_card-scaled.jpg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +21,14 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Healthcare
+- Oncology
+- Drug Discovery
+- Clinical Trials
+- Research
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/peel-therapeutics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/peel-therapeutics_stock/
+  url: https://peeltx.com/
+- type: About
+  url: https://peeltx.com/about/
+- type: Blog
+  url: https://peeltx.com/news/
+- type: Support
+  url: https://peeltx.com/contact/
+- type: PrivacyPolicy
+  url: https://peeltx.com/privacy-policy/
+- type: TermsOfService
+  url: https://peeltx.com/site-terms/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/peel-therapeutics/
+- type: LLMsTxt
+  url: llms/peel-therapeutics-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Peel Therapeutics is a clinical-stage drug developer whose product is a therapeutic pipeline
+    (EP53 nanoparticles, PEEL-224); peeltx.com is a nine-page WordPress marketing site where every
+    developer path — /api, /developers, /docs, /openapi.json, /swagger.json, /graphql — returns the
+    theme's 404, the Darwin.AI discovery platform is internal-only and never exposed, and the sole
+    machine-readable surface is the CMS's default, unadvertised /wp-json/ endpoint rather than a
+    product API.
+  evidence:
+    - url: https://peeltx.com/openapi.json
+      status: 404
+    - url: https://peeltx.com/developers
+      status: 404
+    - url: https://peeltx.com/graphql
+      status: 404
+    - url: https://peeltx.com/.well-known/api-catalog
+      status: 404
+    - url: https://peeltx.com/.well-known/agent-card.json
+      status: 404
+    - url: https://peeltx.com/llms.txt
+      status: 200
+    - url: https://peeltx.com/
+      status: 200
+  checked: '2026-08-26'

@@ -11,6 +11,17 @@ description: >-
   Darwin Biobank, a comparative-oncology sample collection. Peel is a therapeutics developer rather than a
   software vendor: it publishes no developer program, no public API, and no machine-readable API contract.
 url: https://raw.githubusercontent.com/api-evangelist/peel-therapeutics/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://peeltx.com/wp-content/uploads/peel_facebook_card-scaled.jpg
 x-type: company
 x-source: harvest:secondary-market

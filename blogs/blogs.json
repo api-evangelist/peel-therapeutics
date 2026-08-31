@@ -1,0 +1,14 @@
+{
+  "repo": "peel-therapeutics",
+  "feeds": [
+    {
+      "source": "https://peeltx.com/about/",
+      "feed_url": "https://peeltx.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
